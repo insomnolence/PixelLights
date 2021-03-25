@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Pixel Lights</string>
+    <string name="nav_header_title">12 Bars</string>
+    <string name="nav_header_subtitle">Pixel Lighting Control</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="preset_lighting">Preset Lighting</string>
+    <string name="manual_lighting">Manual Lighting</string>
+    <string name="bluetooth_config">Bluetooth Config</string>
+
+    <string name="home_second">Home Second</string>
+    <string name="pattern_prompt">Select Light Pattern</string>
+    <string name="clear">Clear</string>
+    <string name="logging">Logging</string>
+    <string name="textview">TextView</string>
+    <string name="refresh_the_device_list">Refresh the Device List</string>
+    <string name="color_1">Color 1</string>
+    <string name="color_2">Color 2</string>
+    <string name="color_3">Color 3</string>
+    <string name="intensity">Intensity</string>
+    <string name="rate">Rate</string>
+    <string name="level">Level</string>
+    <string name="color_1_selector">Color 1 Selector</string>
+    <string name="color_2_selector">Color 2 Selector</string>
+    <string name="color_3_selector">Color 3 Selector</string>
+    <string name="idle">Idle</string>
+    <string name="warning">Warning</string>
+    <string name="exit">Exit</string>
+    <string name="rwr_nsubtle">RWR \nSubtle</string>
+    <string name="rwb_nparis_usa">RWB \nParis USA</string>
+    <string name="blue_nsmooth">Blue \nSmooth</string>
+    <string name="rwr_ncandy">RWR \nCandy</string>
+    <string name="rwg_ncandy">RWG \nCandy</string>
+    <string name="rwg_ntree">RWG \nTree</string>
+    <string name="rwg_nmarch">RWG \nMarch</string>
+    <string name="rwg_nwipe">RWG \nWipe</string>
+    <string name="rwg_nflicker">RWG \nFlicker</string>
+    <string name="cga">CGA</string>
+    <string name="rainbow">Rainbow</string>
+    <string name="strobe">Strobe</string>
+
+    <string-array name="pattern_strings">
+        <item>Mini Twinkle</item>
+        <item>Mini Sparkle</item>
+        <item>Sparkle</item>
+        <item>Rainbow</item>
+        <item>Flash</item>
+        <item>March</item>
+        <item>Wipe</item>
+        <item>Gradient</item>
+        <item>Fixed</item>
+        <item>Strobe</item>
+        <item>Candy Cane</item>
+    </string-array>
+
+</resources>

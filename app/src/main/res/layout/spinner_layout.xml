@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relative_spinner"
+    android:layout_width="188dp"
+    android:layout_height="60dp"
+    android:layout_marginRight="3dp"
+    android:layout_weight=".28"
+    android:background="#008b8b"
+    android:orientation="horizontal">
+
+    <Spinner
+        android:id="@+id/pattern_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="5dp"
+        android:background="@android:color/transparent"
+        android:dropDownWidth="wrap_content"
+        android:entries="@array/pattern_strings"
+        android:gravity="center"
+        android:popupBackground="#008b8b"
+        android:prompt="@string/pattern_prompt"
+        android:spinnerMode="dropdown" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:src="@drawable/down_arrow" />
+</RelativeLayout>

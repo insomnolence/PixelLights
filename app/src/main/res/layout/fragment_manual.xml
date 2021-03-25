@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/black_mesh"
+    tools:context=".ui.manual.ManualFragment"
+    tools:ignore="MissingConstraints">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/color_1"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/color1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/color_2"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/color2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/color1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="@string/color_3"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/color3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/color2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/intensity"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/intensity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/color1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/rate"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/rate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/color1"
+        app:layout_constraintTop_toBottomOf="@+id/intensity" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/level"
+        android:textColor="#FFFFFF"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@+id/level"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/color1"
+        app:layout_constraintTop_toBottomOf="@+id/rate" />
+
+    <view class="com.example.pixellights.ui.manual.ManualFragment$ColorView"
+        android:id="@+id/color1"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:src="@drawable/wheel"
+        app:layout_constraintBottom_toTopOf="@id/color2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/color_1_selector" />
+
+    <view class="com.example.pixellights.ui.manual.ManualFragment$ColorView"
+        android:id="@+id/color2"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:src="@drawable/wheel"
+        app:layout_constraintBottom_toBottomOf="@id/color3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/color1"
+        android:contentDescription="@string/color_2_selector" />
+
+    <view class="com.example.pixellights.ui.manual.ManualFragment$ColorView"
+        android:id="@+id/color3"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:src="@drawable/wheel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/color2"
+        android:contentDescription="@string/color_3_selector" />
+
+
+    <SeekBar
+        android:id="@+id/intensity"
+        android:layout_width="188dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/bar_color"
+        android:max="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/rate"
+        android:layout_width="188dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/bar_color"
+        android:max="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intensity" />
+
+    <SeekBar
+        android:id="@+id/level"
+        android:layout_width="188dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/bar_color"
+        android:max="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rate" />
+<!--
+    <Button
+        android:id="@+id/mini_twinkle"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:text="Mini \nTwinkle"
+        app:layout_constraintBottom_toTopOf="@id/mini_sparkle"
+        app:layout_constraintEnd_toStartOf="@id/wipe"
+        app:layout_constraintStart_toEndOf="@+id/color2"
+        app:layout_constraintTop_toBottomOf="@+id/level" />
+
+    <Button
+        android:id="@+id/wipe"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:text="Wipe"
+        app:layout_constraintBottom_toTopOf="@id/sparkle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mini_twinkle"
+        app:layout_constraintTop_toBottomOf="@+id/level" />
+
+    <Button
+        android:id="@+id/mini_sparkle"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="Mini \nSparkle"
+        app:layout_constraintBottom_toTopOf="@id/rainbow"
+        app:layout_constraintEnd_toStartOf="@id/sparkle"
+        app:layout_constraintStart_toEndOf="@+id/color2"
+        app:layout_constraintTop_toBottomOf="@+id/mini_twinkle" />
+
+    <Button
+        android:id="@+id/sparkle"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="Sparkle"
+        app:layout_constraintBottom_toTopOf="@id/gradient"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mini_sparkle"
+        app:layout_constraintTop_toBottomOf="@+id/wipe" />
+
+    <Button
+        android:id="@+id/rainbow"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="Rainbow"
+        app:layout_constraintBottom_toTopOf="@id/flash"
+        app:layout_constraintEnd_toStartOf="@id/gradient"
+        app:layout_constraintStart_toEndOf="@+id/color2"
+        app:layout_constraintTop_toBottomOf="@+id/mini_sparkle" />
+
+    <Button
+        android:id="@+id/gradient"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="Gradient"
+        app:layout_constraintBottom_toTopOf="@id/march"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rainbow"
+        app:layout_constraintTop_toBottomOf="@+id/sparkle" />
+
+    <Button
+        android:id="@+id/flash"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="Flash"
+        app:layout_constraintBottom_toTopOf="@id/fixed"
+        app:layout_constraintEnd_toStartOf="@id/march"
+        app:layout_constraintStart_toEndOf="@+id/color3"
+        app:layout_constraintTop_toBottomOf="@+id/rainbow" />
+
+    <Button
+        android:id="@+id/march"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="March"
+        app:layout_constraintBottom_toTopOf="@id/strobe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/flash"
+        app:layout_constraintTop_toBottomOf="@+id/gradient" />
+
+    <Button
+        android:id="@+id/fixed"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="Fixed"
+        app:layout_constraintBottom_toTopOf="@id/candy"
+        app:layout_constraintEnd_toStartOf="@id/strobe"
+        app:layout_constraintStart_toEndOf="@+id/color3"
+        app:layout_constraintTop_toBottomOf="@+id/flash" />
+
+    <Button
+        android:id="@+id/strobe"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="Strobe"
+        app:layout_constraintBottom_toTopOf="@+id/candy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/fixed"
+        app:layout_constraintTop_toBottomOf="@+id/march" />
+
+    <Button
+        android:id="@+id/candy"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:text="Candy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/color3"
+        app:layout_constraintTop_toBottomOf="@+id/fixed" />
+
+    <Spinner
+        android:id="@+id/pattern_spinner"
+        android:layout_width="188dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="250dp"
+        android:dropDownWidth="wrap_content"
+        android:entries="@array/pattern_strings"
+        android:popupBackground="#008b8b"
+        android:prompt="@string/pattern_prompt"
+        android:spinnerMode="dropdown"
+        android:theme="@style/SpinnerTheme"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/color2"
+        app:layout_constraintTop_toBottomOf="@+id/level" />
+-->
+    <RelativeLayout
+        android:layout_width="188dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="3dp"
+        android:layout_weight=".28"
+        android:background="#008b8b"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/color2"
+        app:layout_constraintTop_toBottomOf="@+id/level"
+        android:layout_marginBottom="250dp">
+
+        <Spinner
+            android:id="@+id/pattern_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:dropDownWidth="wrap_content"
+            android:entries="@array/pattern_strings"
+            android:gravity="center"
+            android:theme="@style/spinnerTheme"
+            android:background="#008b8b"
+            android:popupBackground="#008b8b"
+            android:prompt="@string/pattern_prompt"
+            android:spinnerMode="dropdown" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/spinner_bg"/>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
